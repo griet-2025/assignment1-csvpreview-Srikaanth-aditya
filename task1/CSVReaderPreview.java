@@ -5,17 +5,18 @@ import java.io.FileReader;
 import java.io.IOException;
 public class CSVReaderPreview {
     public static void main(String[] args) {
-        String path = "dataset/dataset.csv";
+        // TO DO: Write your code below 
+        String filePath = "dataset/dataset.csv";
         String row;
         try{
-            BufferedReader br = new BufferedReader(new FileReader(path));
+            BufferedReader br = new BufferedReader(new FileReader(filePath));
             String headerRow = br.readLine();
             if (headerRow == null) {
                 System.out.println("Empty CSV");
                 return;
             }
 
-            // System.out.println("=== Data Preview ===\n");
+            System.out.println("=== Data Preview ===\n");
             
             String[] columnHeaders = headerRow.split(",");
             System.out.println("Columns:");
